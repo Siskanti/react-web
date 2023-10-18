@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+	--mainColor: #dea0b7;
+	--mainColorLight: #555852;
+	--secondaryColor: #f3eeee;
+	--textColor: #000000;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
+}
+
+nav a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: var(--secondaryColor);
+}
+
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.post-card {
+  border-style: solid;
+  margin-top: 10px;
+  padding: 5px;
+}
+.post-card .title {
+  color: rgb(11, 11, 11);
+}
+
+.add-post-container {
+  border-style: solid;
+  margin-left: 5px;
+}
+#title,
+#body {
+  margin-left: 22px;
+  margin: 5px;
+}
+
+#frmsubmit {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-product-container {
+  margin-bottom: 20px;
+}
+
+.add-product-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.add-product-container form label {
+  margin-bottom: 5px;
+}
+
+.add-product-container form input,
+.add-product-container form textarea {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #dea0b7;
+  border: 1px solid #161515;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 5px;
+  background-color:  #dea0b7;
+ 
+}
+
+.product-card .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0a0908;
+  font-size: 25px;
+}
+
+.product-card .description {
+  margin-bottom: 10px;
+}
+
+.product-card .price {
+  font-size: 14px;
+}
+
+.product-card .discount {
+  font-size: 14px;
+  font-weight: bold;
+  color: #232323;
+}
+
+.product-card .rating {
+  font-size: 14px;
+}
+
+.product-card .stock {
+  font-size: 14px;
+}
+
+.product-card .brand {
+  font-size: 14px;
+}
+
+.product-card .category {
+  font-size: 14px;
+}
+
+.product-card .thumbnail img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-card .images img {
+  width: 100%;
+  max-height: 100px;
+  object-fit: cover;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.product-card .button button {
+  padding: 5px 10px;
+  background-color: #fffffe;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 9px;
+  margin-top: 5px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.form-inputs .form-inputs{  
+  margin-right: 100px;
+
+}
